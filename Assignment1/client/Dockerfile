@@ -6,8 +6,7 @@ COPY . ./
 # RUN apt-get update && apt-get install -y git && git clone https://github.com/mostafa-metwaly/Distributed_systems_2021
 # #Set working directory
 # WORKDIR /Distributed_systems_2021
-EXPOSE 5000
 ENTRYPOINT [ "python3"   ]
 
-CMD ["server.py", "0.0.0.0" ]
+CMD ["client.py" ]
 

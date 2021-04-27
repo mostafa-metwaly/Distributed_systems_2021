@@ -1,0 +1,25 @@
+version: '3'
+
+# a service is a container.
+services:
+
+ #server container - keyword "server"
+ server:
+  image: server:latest
+  
+
+
+  #map ports from the docker container back to host machine
+  ports:
+   - "8989:8989"
+   
+   
+ #client container - keyword "client"
+ client:
+  image: client:latest
+
+
+  network_mode: host
+
+  depends_on:
+   - server
