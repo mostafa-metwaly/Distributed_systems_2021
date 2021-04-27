@@ -9,7 +9,7 @@ class Server:
 	connections = []
 
 	def __init__(self):
-		self.sock.bind(('0.0.0.0', 5000))
+		self.sock.bind(('0.0.0.0', 8989))
 		self.sock.listen(5)
 
 	def handler(self, c, a):

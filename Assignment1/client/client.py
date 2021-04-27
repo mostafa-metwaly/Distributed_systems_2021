@@ -9,8 +9,8 @@ class Client:
 		while True:
 			self.sock.send(bytes(input(""),'utf-8'))
 
-	def __init__(self,address):
-		self.sock.connect((address,5000))
+	def __init__(self):
+		self.sock.connect(('0.0.0.0',8989))
 
 		iThread = threading.Thread(target=self.sendMSG)
 		iThread.daemon = True
@@ -25,8 +25,4 @@ class Client:
 
 
 
-if (len(sys.argv) >1):
-	client = Client(sys.argv[1])
-
-else:
-	print("please re-enter the ip address")
+client = Client()
