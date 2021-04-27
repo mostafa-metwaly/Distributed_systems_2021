@@ -18,7 +18,7 @@ to run the chatting system you will need to build the images of server and clien
 ## building Dockerfile images
 ```bash
 $  docker build --pull --rm -f "Assignment1/client/Dockerfile" -t client:latest "Assignment1/client" 
-$  docker build --pull --rm -f "Assignment1/server/Dockerfile" -t client:latest "Assignment1/server" 
+$  docker build --pull --rm -f "Assignment1/server/Dockerfile" -t server:latest "Assignment1/server" 
 ```
 
 ## building Docker-comopse image
