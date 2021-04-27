@@ -1,14 +1,13 @@
 FROM brumbrum/python3
 
-# RUN apk update && apk addbash build-base python3-dev libffi-dev
-
 # WORKDIR /app
-RUN git clone 
 COPY . ./
+# #Install git
+# RUN apt-get update && apt-get install -y git && git clone https://github.com/mostafa-metwaly/Distributed_systems_2021
+# #Set working directory
+# WORKDIR /Distributed_systems_2021
+EXPOSE 5000
+ENTRYPOINT [ "python3"   ]
 
-# RUN pip install -r requirements.txt
-# RUN pip install .
+CMD ["server.py", "0.0.0.0" ]
 
-# RUN chmod +x ./run.sh
-
-CMD ["chatter.py"]
