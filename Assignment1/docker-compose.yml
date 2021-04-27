@@ -5,7 +5,7 @@ services:
 
  #server container - keyword "server"
  server:
-  image: server:latest
+  image: mostafametwaly/server
   
 
 
@@ -16,7 +16,7 @@ services:
    
  #client container - keyword "client"
  client:
-  image: client:latest
+  image: mostafametwaly/client
 
 
   network_mode: host
